@@ -30,19 +30,20 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import SwiftUI
-
-@main
-struct KuchiApp: App {
-  var body: some Scene {
-    WindowGroup {
-      WelcomeView()
-    }
+/// Profile of the learner using the app.
+struct Profile : Codable {
+  /// (Selected) name of the learner.
+  var name: String
+  
+  /// Initializes a new `Profile` with an empty `name`.
+  init() {
+    self.name = ""
   }
-}
-
-struct KuchiApp_Previews: PreviewProvider {
-  static var previews: some View {
-    WelcomeView()
+  
+  /// Initializes a new `Profile` with a specified name.
+  ///  - Parameters:
+  ///     - name Name of the user profile.
+  init(named name: String) {
+    self.name = name
   }
 }

@@ -32,17 +32,17 @@
 
 import SwiftUI
 
-@main
-struct KuchiApp: App {
-  var body: some Scene {
-    WindowGroup {
-      WelcomeView()
+struct WelcomeView: View {
+    var body: some View {
+        ZStack {
+            WelcomeBackgroundImage()
+            WelcomeMessageView()
+        }
     }
-  }
 }
 
-struct KuchiApp_Previews: PreviewProvider {
-  static var previews: some View {
-    WelcomeView()
-  }
+struct WelcomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        WelcomeView()
+    }
 }
